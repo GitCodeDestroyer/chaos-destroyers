@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Gothic';
+    src: url("../fonts/CenturyGothic/GOTHIC.ttf");
+    src: url("../fonts/CenturyGothic/GOTHIC.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothicCBold';
+    src: url("../fonts/CenturyGothic/GOTHICB.ttf");
+    src: url("../fonts/CenturyGothic/GOTHICB.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-ms-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+
+/******************************************
+base class definition
+******************************************/
+
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'GothicCBold';
+	color: #333;
+	font-weight: 300;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.white {
+	color: #FFF;
+}
+
+.green {
+	color: #70C8BC;
+}
+
+strong {
+	font-family: 'GothicCBold';
+}
+
+.btn {
+	padding: 10px 7px;
+}
+
+.btn-white {
+	border: 2px solid #FFF;
+	color: #FFF;
+
+}
+
+/******************************************
+header, transparent
+******************************************/
+
+.top-nav {
+	height: 60px;
+	position: fixed;
+	width: 100%;
+	padding: 0 2%;
+	font-size: 18px;
+	z-index: 10;
+}
+
+.top-nav .logo {
+	line-height: 60px;
+	float: left;
+}
+
+.top-nav .menu {
+	float: right;
+	width: 50%;
+}
+
+.top-nav .menu a {
+	float: right;
+	color: #FFF;
+	display: inline-block;
+	margin: 0 2%;
+	line-height: 60px;
+}
+
+.top-nav .menu a.dark {
+	color: #aaa;
+}
+
+.top-nav .menu a.active {
+	color: #555;
+	background: #70C8BC;
+	padding: 7px 5px;
+	margin-top: 12px;
+	line-height: 22px;
+	color: #FFF;
+}
+
+.top-nav .menu a:hover {
+	opacity: .9;
+}
+
+/******************************************
+hero image
+******************************************/
+
+.top-hero {
+	background: url(../img/bg3.jpg) no-repeat bottom right;
+	background-size: cover;
+	height: 550px;
+	padding: 75px 0;
+}
+
+.top-hero .parallax {
+	/*background: linear-gradient(45deg, rgba(112,200,188,.3) 30%, rgba(100,100,100,.2) 30%);*/
+	background: linear-gradient(45deg, rgba(0,0,0,.7), rgba(100,100,100,.2));
+	position: absolute;
+	width: 100%;
+	height: 550px;
+	left: 0;
+	top: 0;
+	z-index: 0;
+}
+
+.top-hero .info {
+	height: 400px;
+	width: 324px;
+	background: #FFF;
+	margin: 0 calc((100% - 324px) / 2);
+	text-align: center;
+	background: rgba(0,0,0,.5);
+	color: #FFF;
+	padding: 40px;
+	z-index: 1;
+	position: absolute;
+}
+
+.top-hero .info h1 {
+	border-top: 3px solid #FFF;
+	border-bottom: 3px solid #FFF;
+	margin-bottom: 30px;
+	font-size: 52px;
+	letter-spacing: 10px;
+}
+
+.top-hero .info p {
+	font-family: 'Gothic';
+}
+
+.top-hero .info .btn {
+	margin-top: 20px;
+	display: block;
+}
+
+.top-hero .info .btn:hover {
+	border: 2px solid #70C8BC;
+	color: #70C8BC;
+}
+
+@media only screen and (max-width: 850px) {
+	.top-nav .logo {
+		width: 100%;
+		text-align: center;
+	}
+	
+	.top-nav .menu {
+		display: none;
+	}
+
+	.top-hero .info {
+		width: 300px;
+		margin: 0 calc((100% - 300px) / 2);
+	}
+
+	.top-hero .info h1 {
+		font-size: 46px;
+	}
+}

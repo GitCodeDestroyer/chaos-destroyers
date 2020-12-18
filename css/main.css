@@ -1,0 +1,585 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	transition: all .3s;
+}
+body {
+	text-transform: uppercase;
+	font: inherit;
+	font-family: monospace, consolas;
+	text-align: center;
+	cursor: url("../img/cursor.png"), default !important;
+	overflow: hidden;
+}
+
+a {
+	cursor: url("../img/cursor-big.png"), pointer !important;
+}
+
+#ascrail2000-hr {
+    display: none !important;
+}
+
+#ascrail2000 {
+	-webkit-transition: all 0s;
+	-moz-transition: all 0s;
+	-ms-transition: all 0s;
+	-o-transition: all 0s;
+	transition: all 0s;
+}
+
+::-moz-selection {
+	background: rgba(29, 233, 182, 0.5);
+}
+
+::selection {
+	background: rgba(29, 233, 182, 0.5);
+}
+
+a.car-link {
+	position: fixed;
+	bottom: 2%;
+	font-size: 40px;
+	color: #fff;
+	background: #333;
+	right: 2%;
+	padding: 10px;
+	border-radius: 50%;
+	z-index: 1000000;
+}
+
+a.car-link:hover {
+	background: #fff;
+	color: #333;
+}
+
+/*** HEADER ***/
+
+.navigation {
+	height: 50px;
+	background: rgba(255, 255, 255, .4);
+	position: fixed;
+	top: -30px;
+	width: 100%;
+	box-shadow: 0 0 10px  rgba(255, 255, 255, .2);
+	line-height: 50px;
+	z-index: 100000;
+}
+.navigation:hover {
+	top: 0;
+}
+.navigation a {
+	font-size: 18px;
+	color: #fff;
+	border: 2px solid transparent;
+	padding: 5px 10px;
+	margin: 0 1vw;
+}
+.navigation a:hover,
+.navigation .active {
+	border: 2px solid #fff;
+}
+
+/*** SECTIONS ***/
+
+.section {
+	height: 100vh;
+	text-shadow: 0 0 10px #fff;
+	color: #fff;
+}
+
+.big-text {
+	line-height: 100vh;
+	font-size: 20vh;
+}
+
+.one, #section-one { background: #1BBB9D; }
+.two, #section-two { background: #3497DB; }
+.three, #section-three { background: #33485F; }
+.four, #section-four { background: #E74C3B; }
+.five, #section-five { background: #F39B12; }
+.six, #section-six { background: #9C58B7; }
+
+.content {
+	opacity: 0;
+}
+
+.content,
+.car-road,
+.plant {
+	position: absolute;
+}
+
+#section-one .content { top: 0; }
+#section-two .content { top: 100vh; }
+#section-three .content { top: 200vh; }
+#section-four .content { top: 300vh; }
+#section-five .content { top: 400vh; }
+#section-six .content { top: 500vh; }
+
+#section-one .car-road { top: 0; }
+#section-two .car-road { top: 100vh; }
+#section-three .car-road { top: 200vh; }
+#section-four .car-road { top: 300vh; }
+#section-five .car-road { top: 400vh; }
+#section-six .car-road { top: 500vh; }
+
+.content h2 {
+	margin-top: 40vh;
+}
+
+.left-side {
+	height: 100%;
+	left: 0;
+	width: 50%;
+}
+
+.right-side {
+	height: 100%;
+	right: 0;
+	width: 50%;
+}
+
+.center {
+	height: 100%;
+	width: 100%;
+}
+
+.content .tabs {
+	width: 30%;
+	display: block;
+	background: #363C48;
+	float: left;
+	padding: 2%;
+	text-align: center;
+	height: 100%;
+}
+
+.content .tab {
+	text-shadow: none;
+	transition:  all 0s;
+	margin: 1vh 0;
+	width: 100%;
+	border: 0;
+	padding: .7vh 0;
+	border-radius: 2px;
+	/*transition: all .3s;*/
+	cursor: url("../img/cursor-pointer.png"), pointer !important;
+	box-shadow: 1px 1px 2px rgba(30,30,30,1);
+	font-size: 15px;
+	text-align: center;
+	opacity: 1 !important;
+}
+
+.content .tabs .tab {
+	opacity: .7 !important;
+}
+
+.content .tabs .tab:hover {
+	opacity: 1 !important;
+}
+
+.content .tab-green {
+	background: #9CB65C;
+	color: #445025;
+}
+
+.content .tab-red {
+	background: #C86A54;
+	color: #592C21;
+}
+
+.content small {
+	line-height: 1.5;
+}
+
+.content .tab-orange {
+	background: #C78D62;
+	color: #573C27;
+}
+
+.content .tab-white {
+	background: #fff;
+	color: #363C48;
+}
+
+.content .tab-blue {
+	padding-left: 5%;
+	text-align: center;
+	background: #8D8DC1;
+	color: #3D3D56;
+}
+
+.content .tab-info {
+	border: 2px dashed #fff;
+	color: #fff;
+	opacity: .5;
+	background: transparent;
+}
+
+.content .code {
+	width: 70%;
+	float: right;
+	background: #242E3A;
+	overflow: hidden;
+	height: 100%;
+}
+
+.content .code .tab {
+	max-width: 50%;
+}
+
+.content .code .ui-state-highlight {
+	height: calc(1vw + 1.4vh);
+	margin: 1vh 0;
+	max-width: 50%;
+	background: rgba(255, 255, 255, .2);
+}
+
+.content .fa.fa-trash {
+	position: absolute;
+	right: 7px;
+	width: 5%;
+	margin-top: -1vh;
+	background: #FFF;
+	color: #242E3A;
+	height: calc(1.4vh + 1vw + 4px);
+	line-height: calc(1.4vh + 1vw + 4px);
+}
+
+/*** PLANTS ***/
+
+.plant-1 { top: 5%; }
+.plant-2 { top: 30%; }
+.plant-3 { top: 55%; }
+
+#section-one .plant { left: calc(5% + 55px); }
+#section-two .plant { left: calc(85% - 115px); }
+#section-three .plant { left: calc(20% + 55px); }
+#section-four .plant { left: calc(85% - 115px); }
+#section-five .plant { left: calc(20% + 55px); }
+
+/*** CAR OPTIONS ***/
+
+.black {
+	background: #333;
+}
+
+#section-one .car {
+	top: calc((100%  - 60px) / 2);
+	margin-left: calc(5% + 7px);
+}
+
+#section-one .road {
+	width: 55px;
+	height: 80%;
+	margin-left: 5%;
+}
+
+#section-one .rotation-1 {
+	width: 80%;
+	height: 55px;
+	top: 80%;
+	margin-left: 5%;
+	border-radius: 0 50px 0 50px;
+}
+
+#section-one .rotation-2 {
+	width: 55px;
+	height: 20%;
+	margin-left: calc(85% - 55px);
+	bottom: 5px;
+}
+
+#section-two .car {
+	top: calc((100%  - 60px) / 2);
+	margin-left: calc(85% - 55px + 7px);
+}
+
+#section-two .road {
+	width: 55px;
+	height: 80%;
+	margin-left: calc(85% - 55px);
+}
+
+#section-two .rotation-1 {
+	width: 65%;
+	height: 55px;
+	top: 80%;
+	margin-left: 20%;
+	border-radius: 50px 0 50px 0;
+}
+
+#section-two .rotation-2 {
+	width: 55px;
+	height: 20%;
+	margin-left: 20%;
+	bottom: 5px;
+}
+
+#section-three .car {
+	top: calc((100%  - 60px) / 2);
+	margin-left: calc(20% + 7px);
+}
+
+#section-three .road {
+	width: 55px;
+	height: 80%;
+	margin-left: 20%;
+}
+
+#section-three .rotation-1 {
+	width: 65%;
+	height: 55px;
+	top: 80%;
+	margin-left: 20%;
+	border-radius: 0 50px 0 50px;
+}
+
+#section-three .rotation-2 {
+	width: 55px;
+	height: 20%;
+	margin-left: calc(85% - 55px);
+	bottom: 5px;
+}
+
+#section-four .car {
+	top: calc((100%  - 60px) / 2);
+	margin-left: calc(85% - 55px + 7px);
+}
+
+#section-four .road {
+	width: 55px;
+	height: 80%;
+	margin-left: calc(85% - 55px);
+}
+
+#section-four .rotation-1 {
+	width: 65%;
+	height: 55px;
+	top: 80%;
+	margin-left: 20%;
+	border-radius: 50px 0 50px 0;
+}
+
+#section-four .rotation-2 {
+	width: 55px;
+	height: 20%;
+	margin-left: 20%;
+	bottom: 5px;
+}
+
+#section-five .car {
+	top: calc((100%  - 60px) / 2);
+	margin-left: calc(20% + 7px);
+}
+
+#section-five .road {
+	width: 55px;
+	height: 80%;
+	margin-left: 20%;
+}
+
+#section-five .rotation-1 {
+	width: 85%;
+	height: 55px;
+	top: 80%;
+	margin-left: 20%;
+	border-radius: 0 50px 0 50px;
+}
+
+#section-five .rotation-2 {
+	width: 55px;
+	height: 20%;
+	margin-left: calc(105% - 55px);
+	bottom: 5px;
+}
+
+#section-six .road {
+	width: 55px;
+	height: 80%;
+	margin-left: calc(52.5% - 55px);
+}
+
+#section-six .rotation-1 {
+	width: 50%;
+	height: 55px;
+	bottom: calc((100% - 55px) / 2);
+	float: left;
+}
+
+#section-six .rotation-2 {
+	width: 50%;
+	height: 55px;
+	float: right;
+	bottom: calc((100% - 55px) / 2);
+}
+
+#section-six .car {
+	top: calc((100% - 60px) / 2);
+	margin-left: calc(52.5% - 55px + 7px);
+}
+
+#section-six .medium-text {
+	text-align: center;
+	font-size: 5vw;
+	padding: 2%;
+	color: #FFF;
+	z-index: 10000;
+}
+
+#section-six .left {
+	float: left;
+}
+
+#section-six .right {
+	float: right;
+}
+
+.car {
+	position: absolute;
+	height: 60px;
+	width: 40px;
+	border-radius: 5px;
+	background: #FFDF5A;
+	opacity: 0;
+}
+
+.f_glass {
+	top: 15%;
+	width: 60%;
+	height: 20%;
+	margin-left: 20%;
+	position: absolute;
+	background: #484848;
+	border-radius: 0 0 5px 5px;
+}
+
+.b_glass {
+	width: 60%;
+	height: 20%;
+	bottom: 15%;
+	margin-left: 20%;
+	position: absolute;
+	background: #484848;
+	border-radius: 5px 5px 0 0;
+}
+
+.f_light_l {
+	position: absolute;
+	height: 5%;
+	width: 20%;
+	bottom: -5%;
+	border-radius: 0 0 5px 5px;
+	margin-left: 10%;
+	background: #efefef;
+}
+
+.f_light_r {
+	position: absolute;
+	height: 5%;
+	width: 20%;
+	bottom: -5%;
+	border-radius: 0 0 5px 5px;
+	margin-left: 70%;
+	background: #efefef;
+}
+
+.f_tyre_l {
+	position: absolute;
+	height: 20%;
+	width: 10%;
+	border-radius: 5px 0 0 5px;
+	top: 20%;
+	left: -10%;
+	background: gray;
+}
+
+.f_tyre_r {
+	position: absolute;
+	height: 20%;
+	width: 10%;
+	border-radius: 0 5px 5px 0;
+	top: 20%;
+	left: 100%;
+	background: gray;
+}
+
+.b_tyre_l {
+	position: absolute;
+	height: 20%;
+	width: 10%;
+	border-radius: 5px 0 0 5px;
+	top: 70%;
+	left: -10%;
+	background: gray;
+}
+
+
+
+.b_tyre_r {
+	position: absolute;
+	height: 20%;
+	width: 10%;
+	border-radius: 0 5px 5px 0;
+	top: 70%;
+	left: 100%;
+	background: gray;
+}
+
+@media only screen and (max-width: 1010px) {
+	.navigation {
+		right: -130px;
+		top: 0;
+		height: 100%;
+		width: 150px;
+		background: rgba(255, 255, 255, .9);
+	}
+	.navigation a {
+		height: calc(100vh / 7.2);
+		line-height: calc(100vh / 7.2);
+		padding: 0;
+		margin: calc(100vh / 350) 0;
+		display: block;
+		color: #333;
+	}
+	.navigation a:hover,
+	.navigation .active {
+		border: 2px solid #999;
+	}
+	.navigation:hover {
+		right: 0;
+	}
+	.right-side {
+		right: 22px;
+	}
+	.content h2 {
+		margin-top: 45%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.car-road,
+	#section-six .black,
+	#section-six .car,
+	a.car-link {
+		display: none;
+	}
+	#section-six .car-road {
+		display: block;
+		padding: 5%;
+		line-height: 80vh;
+	}
+	#section-six .medium-text {
+		font-size: 20px;
+	}
+	.content {
+		width: calc(100% - 20px);
+	}
+	.content h2 {
+		margin-top: 30vh;
+	}
+}

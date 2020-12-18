@@ -1,0 +1,134 @@
+/*** ANIMATIONS OF LINES FROM SIDES ***/
+
+.left-animate {
+	position: absolute;
+	height: 20%;
+	left: -100%;
+	opacity: 0;
+}
+
+.right-animate {
+	position: absolute;
+	height: 20%;
+	right: 100%;
+	opacity: 0;
+}
+
+.canLeftAnimate.line1 { animation: load1 1.5s linear 1; width: 100vw; margin-top: 0; }
+.canLeftAnimate.line2 { animation: load2 2.5s linear 1; width: 70vw; margin-top: 20vh; }
+.canLeftAnimate.line3 { animation: load3 2s linear 1; width: 80vw; margin-top: 40vh; }
+.canLeftAnimate.line4 { animation: load4 2.3s linear 1; width: 50vw; margin-top: 60vh; }
+.canLeftAnimate.line5 { animation: load5 2s linear 1; width: 80vw; margin-top: 80vh; }
+
+.canRightAnimate.line1 { animation: right_load1 1.5s linear 1; width: 100vw; margin-top: 0; }
+.canRightAnimate.line2 { animation: right_load2 2.5s linear 1; width: 70vw; margin-top: 20vh; }
+.canRightAnimate.line3 { animation: right_load3 2s linear 1; width: 80vw; margin-top: 40vh; }
+.canRightAnimate.line4 { animation: right_load4 2.3s linear 1; width: 50vw; margin-top: 60vh; }
+.canRightAnimate.line5 { animation: right_load5 2s linear 1; width: 80vw; margin-top: 80vh; }
+
+@keyframes load1 {
+	0% { opacity: 1; left: -100%; }
+	50% { left: 0; }
+	100% { opacity: 1; left: 100%; }
+}
+
+@keyframes load2 {
+	0% { opacity: 1; left: -70%; }
+	50% { left: 0; }
+	100% { opacity: 1; left: 100%; }
+}
+
+@keyframes load3 {
+	0% { opacity: 1; left: -80%; }
+	50% { left: 0; }
+	100% { opacity: 1; left: 100%; }
+}
+
+@keyframes load4 {
+	0% { opacity: 1; left: -50%; }
+	50% { left: 0; }
+	100% { opacity: 1; left: 100%; }
+}
+
+@keyframes load5 {
+	0% { opacity: 1; left: -80%; }
+	50% { left: 0; }
+	100% { opacity: 1; left: 100%; }
+}
+
+@keyframes right_load1 {
+	0% { opacity: 1; right: -100%; }
+	50% { right: 0; }
+	100% { opacity: 1; right: 100%; }
+}
+
+@keyframes right_load2 {
+	0% { opacity: 1; right: -70%; }
+	50% { right: 0; }
+	100% { opacity: 1; right: 100%; }
+}
+
+@keyframes right_load3 {
+	0% { opacity: 1; right: -80%; }
+	50% { right: 0; }
+	100% { opacity: 1; right: 100%; }
+}
+
+@keyframes right_load4 {
+	0% { opacity: 1; right: -50%; }
+	50% { right: 0; }
+	100% { opacity: 1; right: 100%; }
+}
+
+@keyframes right_load5 {
+	0% { opacity: 1; right: -80%; }
+	50% { right: 0; }
+	100% { opacity: 1; right: 100%; }
+}
+
+/*** BIG TEXT ***/
+
+.opacity-text {
+	animation: opacityText 3s linear 1;
+	opacity: .1;
+	left: 100%;
+}
+
+@keyframes opacityText {
+	0% { opacity: 1; }
+	60% { opacity: 1; }
+	100% { opacity: .1; }
+}
+
+/*** SECTION CONTENT ANIMATIONS ***/
+
+.canContentAnimate {
+	animation: opacityContent 3s ease 1;
+	opacity: 1;
+}
+
+@keyframes opacityContent {
+	0% { opacity: 0; margin-top: -100%; }
+	40% { opacity: .1; }
+	100% { opacity: 1; margin-top: 0; }
+}
+
+/*** CAR DRIVING ***/
+
+.canDriveCar {
+	animation: driving 2s ease-in-out 1;
+	opacity: 1 !important;
+	transition: opacity 0s;
+}
+
+@keyframes driving {
+	0% { top: -100px; }
+	100% { top: calc((100%  - 60px) / 2);}
+}
+
+/*** SCALE OF CAR BUTTON ***/
+
+@keyframes scaleButton {
+	0% { transform: scale(1); }
+	100% { transform: scale(1.2); }
+}
